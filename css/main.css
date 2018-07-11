@@ -2,13 +2,20 @@
 Author's custom styles
 ========================================================================== */
 
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Roman.woff2') format('woff2'), url('../fonts/AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Avenir';
     color: black;
     padding: 0;
     margin: 0;
@@ -110,6 +117,7 @@ a:hover {
     position: absolute;
     top: 0px;
     width: 100%;
+    min-height: 100%;
 }
 
 #macbook_bkg {
@@ -310,6 +318,7 @@ a:hover {
     left: 0px;
     right: 0px;
     width: 100%;
+    min-height: 100%;
     -ms-filter: grayscale(0.6);
     -webkit-filter: grayscale(0.6);
     -moz-filter: grayscale(0.6);
@@ -650,7 +659,7 @@ footer .copyright {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
     #what_we_do .row .row {
         height: auto;
         margin-bottom: 50px;
@@ -670,5 +679,20 @@ footer .copyright {
     }
     #why_us_bkg {
         display: none;
+    }
+    #main_bkg {
+        width: auto !important;
+        height: 100% !important;
+    }
+    #macbook_bkg {
+        top: auto !important;
+        width: 100% !important;
+        bottom: 75px !important;
+    }
+    #carousel_bkg {
+        left: -50% !important;
+        right: -50% !important;
+        height: 100% !important;
+        width: auto !important;
     }
 }
