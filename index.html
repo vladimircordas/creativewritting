@@ -33,56 +33,72 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" id="closeButton" class="closeBtn">&times;</a>
+        <ul id="scrollMenu">
+            <li>
+                <a href="#intro">Intro</a>
+            </li>
+            <li>
+                <a id="scrollWork" href="#how_it_works">How It Works</a>
+            </li>
+            <li>
+                <a href="#why_us">Why Us</a>
+            </li>
+            <li>
+                <a href="#what_we_do">What We Do</a>
+            </li>
+            <li>
+                <a href="#carousel_examples">Examples</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+    </div>
+    <!--    <img id="main_bkg" src="./img/table_bckgrnd.png" /> -->
+    <div class="container">
+        <div class="row">
+            <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul>
-                    <li>
-                        <a>About</a>
-                    </li>
+            <nav class="navbar navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
 
-                    <li>
-                        <a>Examples</a>
-                    </li>
-                    <li>
-                        <a>Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!--/.navbar-collapse -->
+                        <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <span id="openButton" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+                </div>
+                <!--/.navbar-collapse -->
         </div>
-    </nav>
-    <main>
+
+        </nav>
+
+        <main>
 
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <section id="main">
-            <img id="main_bkg" src="./img/table_bckgrnd.png" />
-            <img id="macbook_bkg" src="./img/macbook.png" />
-            <div class="container">
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+            <section id="intro">
+
+
                 <h1>Your Success Story Begins Here!</h1>
                 <p>We assign each and every resume project to our professional team. They pour years of experience, knowledge and qualification into every resume to make it a truly powerful document.</p>
 
-            </div>
-        </section>
+                <img id="macbook_bkg" src="./img/macbook.png" />
 
 
-        <section id="how_it_works">
-            <div class="container">
+
+            </section>
+
+            <section id="how_it_works">
+
                 <div class="row">
-                    <h1>How it works?</h1>
+                    <div class="col-md-12">
+                        <h1>How it works?</h1>
+                    </div>
                 </div>
                 <div class="margin-top">
                     <div class="row">
@@ -108,11 +124,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="why_us">
-            <img id="why_us_bkg" class=" img-responsive" src="./img/why_us_bkg.png" />
-            <div class="container">
+
+            </section>
+            <section id="why_us">
+                <img id="why_us_bkg" class=" img-responsive" src="./img/why_us_bkg.png" />
+
                 <div class="row">
                     <div class="col-md-12">
                         <h1>Why Choose Us?</h1>
@@ -179,11 +195,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="what_we_do">
-            <div class="container">
+            </section>
+
+            <section id="what_we_do">
+
                 <h1>What We Offer?</h1>
                 <div class="row">
                     <div class="col-md-3">
@@ -201,9 +217,9 @@
                                 </div>
                             </div>
                             <div id="sd_resume" class="service_description">
-                                <p style="text-align: left;"><strong style="color: green;">Professionally-written</strong> - By experts with specialized experience.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Formatted for success</strong> - To get an employer's attention.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
+                                <p style="text-align: left;"><strong>Professionally-written</strong> - By experts with specialized experience.</p>
+                                <p style="text-align: left;"><strong>Formatted for success</strong> - To get an employer's attention.</p>
+                                <p style="text-align: left;"><strong>Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
                                 <div class="position-bottom width_full ">
                                     <div class="vert_align">
                                         <a class="place_order btn">ORDER NOW</a>
@@ -230,10 +246,10 @@
                                 </div>
                             </div>
                             <div id="sd_resAndCover" class="service_description">
-                                <p style="text-align: left;"><strong style="color: green;">Professionally-written</strong> - By experts with specialized experience.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Formatted for success</strong> - To get an employer's attention.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Cover letter</strong> - Employers are 40% more likely to read a resume with a cover letter.</p>
+                                <p style="text-align: left;"><strong>Professionally-written</strong> - By experts with specialized experience.</p>
+                                <p style="text-align: left;"><strong>Formatted for success</strong> - To get an employer's attention.</p>
+                                <p style="text-align: left;"><strong>Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
+                                <p style="text-align: left;"><strong>Cover letter</strong> - Employers are 40% more likely to read a resume with a cover letter.</p>
                                 <div class="position-bottom width_full ">
                                     <div class="vert_align">
                                         <a class="place_order btn">ORDER NOW</a>
@@ -261,9 +277,9 @@
                                 </div>
                             </div>
                             <div id="sd_curriculumv" class="service_description">
-                                <p style="text-align: left;"><strong style="color: green;">Professionally-written</strong> - By experts with specialized experience.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Formatted for success</strong> - To get an employer's attention.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
+                                <p style="text-align: left;"><strong>Professionally-written</strong> - By experts with specialized experience.</p>
+                                <p style="text-align: left;"><strong>Formatted for success</strong> - To get an employer's attention.</p>
+                                <p style="text-align: left;"><strong>Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
                                 <div class="position-bottom width_full ">
                                     <div class="vert_align">
                                         <a class="place_order btn">ORDER NOW</a>
@@ -290,10 +306,10 @@
                                 </div>
                             </div>
                             <div id="sd_cvAndCl" class="service_description">
-                                <p style="text-align: left;"><strong style="color: green;">Professionally-written</strong> - By experts with specialized experience.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Formatted for success</strong> - To get an employer's attention.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
-                                <p style="text-align: left;"><strong style="color: green;">Cover letter</strong> - Employers are 40% more likely to read a resume with a cover letter.</p>
+                                <p style="text-align: left;"><strong>Professionally-written</strong> - By experts with specialized experience.</p>
+                                <p style="text-align: left;"><strong>Formatted for success</strong> - To get an employer's attention.</p>
+                                <p style="text-align: left;"><strong>Keyword optimized</strong> - To pass through Applicant Tracking Systems.</p>
+                                <p style="text-align: left;"><strong>Cover letter</strong> - Employers are 40% more likely to read a resume with a cover letter.</p>
                                 <div class="position-bottom width_full ">
                                     <div class="vert_align">
                                         <a class="place_order btn">ORDER NOW</a>
@@ -308,42 +324,43 @@
                         </div>
                     </div>
                 </div>
-        </section>
 
-        <section id="carousel_examples">
-            <img id="carousel_bkg" src="./img/carousel_bkg.png" />
-            <div class="container flex">
-                <h1>Examples Of Our Work:</h1>
-                <div id="carousel_body">
+            </section>
+
+            <section id="carousel_examples">
+
+                <div class="flex">
+                    <h1>Examples Of Our Work:</h1>
+                    <div id="carousel_body">
 
 
 
-                    <div id="sync1" class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
-                        </div>
-                        <div class="item">
-                            <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
-                        </div>
-                        <div class="item">
-                            <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
-                        </div>
-                        <div class="item">
-                            <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
-                        </div>
-                        <div class="item">
-                            <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
-                        </div>
-                        <div class="item">
-                            <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
-                        </div>
+                        <div id="sync1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img id="myImg" src="./img/cv.jpg" alt="Snow" style="width:100%;">
+                            </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="container">
+            </section>
+            <section id="contact">
+
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <h3>When you choose our resume-writing services, we guarantee the following:</h3>
@@ -378,10 +395,10 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="socials_help">
-            <div class="container">
+
+            </section>
+            <section id="socials_help">
+
                 <div class="row">
                     <div class="col-md-3">
                         <ul>
@@ -410,23 +427,24 @@
                             <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
                         </ul>
                     </div>
+
                 </div>
-            </div>
-        </section>
+            </section>
 
 
-    </main>
-    <footer>
-        <div class="container">
+        </main>
+        <footer>
+
             <div class="copyright">2018© SMLwebsite</div>
-        </div>
-    </footer>
-    <!-- /container -->
 
-    <script src="js/main.js"></script>
+        </footer>
+        <!-- /container -->
+
+        <script src="js/main.js"></script>
 
 
-
+    </div>
+    </div>
 </body>
 
 </html>
