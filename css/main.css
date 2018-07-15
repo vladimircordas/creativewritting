@@ -280,8 +280,8 @@ a:hover {
 }
 
 .service_description.shown {
-    left: 0px;
-    right: 0px;
+    left: 5px;
+    right: 5px;
 }
 
 .service_description p {
