@@ -19,40 +19,55 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+// Sidemenu and body on click animations
 
 $(document).ready(function() {
+    $('#openButton').click(function() {
+        $("#mySidenav").toggleClass('open');
+    });
+    
+    $('#closeButton').click(function()  {
+        $("#mySidenav").removeClass('open');
+    });
     $('#resume').click(function(){
         $('#sd_resume').toggleClass('shown');
         if ( $('#sd_resume').hasClass('shown') ){
-            $('#resume').html('<i class="fa fa-minus"></i> Hide Package Benefits').css({ 'background-color': '#ffffff', 'color': 'black'});
+            $('#resume').html('<i class="fa fa-minus"></i> Hide Package Benefits').addClass('shown');
         } else {
-            $('#resume').html('<i class="fa fa-plus"></i> Show Package Benefits').css({ 'background-color': '#363636', 'color': 'white'});
+            $('#resume').html('<i class="fa fa-plus"></i> Show Package Benefits').removeClass('shown');
         }
     });
     $('#resAndCover').click(function(){
         $('#sd_resAndCover').toggleClass('shown');
         if ( $('#sd_resAndCover').hasClass('shown') ){
-            $('#resAndCover').html('<i class="fa fa-minus"></i> Hide Package Benefits').css({ 'background-color': '#ffffff', 'color': 'black'});
+            $('#resAndCover').html('<i class="fa fa-minus"></i> Hide Package Benefits').addClass('shown');
         } else {
-            $('#resAndCover').html('<i class="fa fa-plus"></i> Show Package Benefits').css({ 'background-color': '#363636', 'color': 'white'});
+            $('#resAndCover').html('<i class="fa fa-plus"></i> Show Package Benefits').removeClass('shown');
         }
     });
     $('#curriculumv').click(function(){
         $('#sd_curriculumv').toggleClass('shown');
         if ( $('#sd_curriculumv').hasClass('shown') ){
-            $('#curriculumv').html('<i class="fa fa-minus"></i> Hide Package Benefits').css({ 'background-color': '#ffffff', 'color': 'black'});
+            $('#curriculumv').html('<i class="fa fa-minus"></i> Hide Package Benefits').addClass('shown');
         } else {
-            $('#curriculumv').html('<i class="fa fa-plus"></i> Show Package Benefits').css({ 'background-color': '#363636', 'color': 'white'});
+            $('#curriculumv').html('<i class="fa fa-plus"></i> Show Package Benefits').removeClass('shown');
         }
-
-        
     });
     $('#cvAndCl').click(function(){
         $('#sd_cvAndCl').toggleClass('shown');
         if ( $('#sd_cvAndCl').hasClass('shown') ){
-            $('#cvAndCl').html('<i class="fa fa-minus"></i> Hide Package Benefits').css({ 'background-color': '#ffffff', 'color': 'black'});
+            $('#cvAndCl').html('<i class="fa fa-minus"></i> Hide Package Benefits').addClass('shown');
         } else {
-            $('#cvAndCl').html('<i class="fa fa-plus"></i> Show Package Benefits').css({ 'background-color': '#363636', 'color': 'white'});
+            $('#cvAndCl').html('<i class="fa fa-plus"></i> Show Package Benefits').removeClass('shown');
         }
     });
+    
+    
+        $("#scrollMenu li a").click(function(e) {
+          var destination = $(this).attr('href');
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $(destination).offset().top
+          }, 300);
+        });
 });
