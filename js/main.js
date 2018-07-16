@@ -23,11 +23,14 @@ $('.owl-carousel').owlCarousel({
 
 $(document).ready(function() {
     $('#openButton').click(function() {
+        $(this).toggleClass('active');
         $("#mySidenav").toggleClass('open');
+        $('#myNav').toggleClass('open');
     });
     
     $('#closeButton').click(function()  {
         $("#mySidenav").removeClass('open');
+        $('#myNav').toggleClass('open');
     });
     $('#resume').click(function(){
         $('#sd_resume').toggleClass('shown');
