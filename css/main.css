@@ -21,6 +21,14 @@ Author's custom styles
         margin: 0;
         overflow-x: hidden;
         background: url('../img/table_bckgrnd.png');
+        background-position: center center;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: 600;
     }
     
     .sidenav {
@@ -31,9 +39,14 @@ Author's custom styles
         right: 0;
         background-color: white;
         overflow-x: hidden;
-        transition: 0.3s;
+        transition: all 0.3s ease;
         padding-top: 60px;
         z-index: 9999;
+        -ms-filter: drop-shadow(0 0 5px #000000);
+        -webkit-filter: drop-shadow(0 0 5px #000000);
+        -moz-filter: drop-shadow(0 0 5px #000000);
+        -o-filter: drop-shadow(0 0 5px #000000);
+        filter: drop-shadow(0 0 5px #000000);
     }
     
     .sidenav.open {
@@ -47,6 +60,7 @@ Author's custom styles
         font-size: 40px;
         z-index: 999;
         padding: 0px;
+        display: none;
     }
     
     .sidenav .closeBtn:hover {
@@ -78,6 +92,71 @@ Author's custom styles
         position: absolute;
         right: 15px;
         top: 5px;
+        overflow: visible;
+        margin: 0;
+        padding: 20px 0 0 0;
+        cursor: pointer;
+        transition-timing-function: linear;
+        transition-duration: .15s;
+        transition-property: opacity, filter;
+        text-transform: none;
+        color: inherit;
+        border: 0;
+        background-color: transparent;
+    }
+    
+    .hamburger-box {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+    }
+    
+    .hamburger-inner,
+    .hamburger-inner:after,
+    .hamburger-inner:before {
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        transition-timing-function: ease;
+        transition-duration: .15s;
+        transition-property: transform;
+        border-radius: 4px;
+        background-color: #000;
+    }
+    
+    .hamburger .hamburger-inner,
+    .hamburger .hamburger-inner:after,
+    .hamburger .hamburger-inner:before {
+        background-color: black;
+    }
+    
+    .hamburger-inner:before {
+        top: -10px;
+        transition: top .2s ease .2s, transform .2s cubic-bezier(.165, .84, .44, 1);
+    }
+    
+    .hamburger-inner:after,
+    .hamburger-inner:before {
+        display: block;
+        content: "";
+    }
+    
+    .hamburger-inner:after {
+        bottom: -10px;
+        transition: bottom .2s ease .2s, transform .2s cubic-bezier(.165, .84, .44, 1);
+    }
+    
+    .hamburger.active .hamburger-inner:before {
+        top: 0;
+        transition: top .2s ease, transform .2s cubic-bezier(.895, .03, .685, .22) .2s;
+        transform: translate3d(8px, -10px, 0) rotate(-135deg) scaleX(.7);
+    }
+    
+    .hamburger.active .hamburger-inner:after {
+        bottom: 0;
+        transition: bottom .2s ease, transform .2s cubic-bezier(.895, .03, .685, .22) .2s;
+        transform: translate3d(8px, 10px, 0) rotate(-45deg) scaleX(.7);
     }
     
     section {
@@ -96,6 +175,14 @@ Author's custom styles
     a:hover {
         text-decoration: none;
         cursor: pointer;
+    }
+    
+    #myNav {
+        transition: all 0.3s ease;
+    }
+    
+    #myNav.open {
+        right: 319px;
     }
     
     .navbar {
@@ -677,6 +764,9 @@ Author's custom styles
     }
     
     @media screen and (max-width: 992px) {
+        #how_it_works {
+            padding-bottom: 65px;
+        }
         .why_us {
             margin-top: 40px;
         }
@@ -689,9 +779,18 @@ Author's custom styles
         #what_we_do .row .row {
             height: 180px;
         }
+        #what_we_do .col-md-3 {
+            margin-bottom: 30px;
+        }
+        #what_we_do .row .row {
+            margin-bottom: 10px;
+        }
         .position-bottom {
             position: relative;
             bottom: 0;
+        }
+        .service_description .position-bottom {
+            position: absolute;
         }
         .service_description {
             height: 180px;
@@ -713,6 +812,7 @@ Author's custom styles
             font-size: 36px;
             z-index: 999;
             padding: 0px;
+            display: block;
         }
         #openButton {
             right: 15px;
