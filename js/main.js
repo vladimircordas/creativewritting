@@ -31,6 +31,7 @@ $(document).ready(function() {
     $('#closeButton').click(function()  {
         $("#mySidenav").removeClass('open');
         $('#myNav').toggleClass('open');
+        $('#openButton').toggleClass('active');
     });
     $('#resume').click(function(){
         $('#sd_resume').toggleClass('shown');
