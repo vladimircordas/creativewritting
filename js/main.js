@@ -77,4 +77,11 @@ $(document).ready(function() {
             scrollTop: $(destination).offset().top
           }, 300);
         });
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 0) {
+                $('#myNav').addClass('small');
+            } else {
+                $('#myNav').removeClass('small');
+            }
+        });
 });
