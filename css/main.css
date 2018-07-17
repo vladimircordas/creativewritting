@@ -39,7 +39,7 @@ Author's custom styles
         right: 0;
         background-color: white;
         overflow-x: hidden;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
         padding-top: 60px;
         z-index: 9999;
         -ms-filter: drop-shadow(0 0 5px #000000);
@@ -91,7 +91,7 @@ Author's custom styles
     #openButton {
         position: absolute;
         right: 15px;
-        top: 5px;
+        top: 3px;
         overflow: visible;
         margin: 0;
         padding: 20px 0 0 0;
@@ -103,6 +103,12 @@ Author's custom styles
         color: inherit;
         border: 0;
         background-color: transparent;
+        line-height: 90px;
+        transition: line-height .2s ease;
+    }
+    
+    #myNav.small #openButton {
+        line-height: 40px;
     }
     
     .hamburger-box {
@@ -178,11 +184,40 @@ Author's custom styles
     }
     
     #myNav {
-        transition: all 0.3s ease;
+        transition: all .2s ease;
+        height: 50px;
     }
     
     #myNav.open {
         right: 319px;
+    }
+    
+    #myNav {
+        height: 100px;
+    }
+    
+    #myNav .navbar-brand {
+        line-height: 100px;
+        transition: all .2s ease;
+    }
+    
+    #myNav.small .navbar-brand {
+        line-height: 50px;
+    }
+    
+    #myNav.small {
+        height: 50px;
+    }
+    
+    #myNav img {
+        height: 100px;
+        margin-left: 0;
+        transition: all .2s ease;
+        float: left;
+    }
+    
+    #myNav.small img {
+        height: 50px;
     }
     
     .navbar {
@@ -296,9 +331,18 @@ Author's custom styles
     }
     
     #what_we_do .row .row {
-        height: 300px;
+        height: 280px;
         margin-bottom: 30px;
         overflow: hidden;
+    }
+    
+    #what_we_do .pannel_wrapper {
+        padding: 10px 15px;
+        transition: background-color .2s ease;
+    }
+    
+    #what_we_do .pannel_wrapper:hover {
+        background: #e3e3e3;
     }
     
     .vert_align {
@@ -354,7 +398,7 @@ Author's custom styles
         color: black;
         border: 1px solid darkgray;
         padding: 10px;
-        background: transparent;
+        background: white;
         width: 200px;
     }
     
@@ -364,23 +408,24 @@ Author's custom styles
     
     .white-panel-button button.shown {
         border: 1px solid black;
+        background: #e3e3e3;
     }
     
     .width_full {
         width: 100%;
-        bottom: 10px !important;
+        bottom: 15px !important;
         left: 0px;
     }
     
     .service_description {
         position: absolute;
-        top: 0;
+        top: 5px;
         bottom: 30px;
         left: 100%;
         right: -100%;
         background: white;
         height: 300px;
-        transition: all .3s ease;
+        transition: all .2s ease;
         border: 1px solid black;
         padding: 10px;
     }
@@ -528,7 +573,7 @@ Author's custom styles
         margin-bottom: 10px;
         resize: vertical;
         color: black;
-        transition: all .3s ease-in-out;
+        transition: all .2s ease-in-out;
         display: block;
     }
     
@@ -704,8 +749,8 @@ Author's custom styles
     }
     
     .owl-theme .owl-nav [class*='owl-'] {
-        -webkit-transition: all .3s ease;
-        transition: all .3s ease;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
     }
     
     .owl-theme .owl-nav [class*='owl-'].disabled:hover {
@@ -734,7 +779,7 @@ Author's custom styles
     }
     
     .owl-item {
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
         filter: grayscale(1);
     }
     
@@ -800,6 +845,15 @@ Author's custom styles
     @media screen and (max-width: 768px) {
         #navbar {
             height: auto;
+        }
+        #myNav .navbar-brand {
+            display: none;
+        }
+        #myNav img {
+            height: 100px;
+            margin-left: 15px;
+            transition: all .2s ease;
+            float: left;
         }
         #mySidenav.open {
             width: 100%;
